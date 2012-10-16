@@ -1,0 +1,17 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<form action="/room/room_add/" method="post">
+发布标题：<input type="text" name="room_topic" id="room_topic" /><p />
+房屋描述：<input type="text" name="room_desc" id="room_desc" /><p />
+房屋户型：<input type="text" name="house_type" id="house_type" /><p />
+房屋面积：<input type="text" name="square" id="square" /> 平方米<p />
+房屋租金：<input type="text" name="rent" id="rent" /> /月<p />
+支付类型：<input type="text" name="pay_type" id="pay_type" /><p />
+所在城市：<input type="text" name="room_city" id="room_city" /><p />
+房屋地址：<input type="text" name="room_address" id="address" /><p />
+房屋类型：<input type="text" name="room_type" id="room_type" /><p />
+配套设施：<input type="text" name="facilities" id="facilities" /><p />
+<input type="submit" name="room_add" id="room_add" value="发布房屋信息">
+<a href="/user/user_center/">返回用户中心</a>
+</form>
+{% endblock %}

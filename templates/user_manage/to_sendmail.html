@@ -1,0 +1,8 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<form action="/user/sendmail/" method="post">
+标题：<input type="text" name="title" id="title" /><p />
+内容：<textarea cols="50" rows="10" id="content" name="content" ></textarea><p />
+<input type="submit" value="发送邮件"><a href="/user/user_center/">返回用户中心</a>
+</form>
+{% endblock %}

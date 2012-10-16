@@ -1,0 +1,17 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<strong>{{room.room_topic}}</strong><p />
+描述：{{ room.room_desc }}<p />
+户型：{{ room.house_type }}<p />
+面积：{{ room.square }} 平方米<p />
+租金：{{ room.rent }} /月<p />
+支付方式：{{ room.pay_type }}<p />
+发布日期：{{ room.pub_date }}<p />
+所在城市：{{ room.room_city }}<p />
+具体地址：{{ room.room_address }}<p />
+房屋类型：{{ room.room_type }}<p />
+配套设施：{{ room.facilities }}<p />
+联系电话：{{ user_contact.phone }}<p />
+联&nbsp&nbsp系&nbsp&nbsp人：{{ user_contact.contact }}<p />
+<a href="/user/user_center/">返回</a>
+{% endblock %}

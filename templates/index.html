@@ -1,0 +1,17 @@
+﻿{% extends "base.html" %}
+{%block content%}
+<h1>欢迎使用本租赁系统</h1>(登陆后可以发布出租信息)<p />
+
+<form action="/user/login/" method="post">
+用户：<input type="text" name="user_name" id="user_name" /><p />
+密码：<input type="password" name="password" id="password" /><p />
+<input type="submit" name="login" id="login" value="登陆" />&nbsp<a href="/user/to_reg/">我还没有注册</a>
+</form>
+
+<p /><p />
+最近发布的租房信息：<p />
+{% for room in rooms %}
+<a href="/room/detail/?room_id={{room.id}}">{{room.room_topic}}</a> {{ room.pub_date }}<p />
+{% endfor %}
+
+{%endblock%}

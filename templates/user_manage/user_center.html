@@ -1,0 +1,19 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<h1>{{ user_name }},欢迎你来到用户中心，在这里你可以发布你的租赁信息、修改你的个人资料和密码等。</h1>
+<a href="/user/to_mod_pass/">修改个人密码</a>
+<a href="/user/to_mod_contact/">修改联系方式</a>
+<a href="/room/to_room_add/">发布信息</a>
+有问题？<a href="/user/to_sendmail/">发送邮件</a>给管理员！
+<a href="/user/logout/">退出系统</a>
+<p />
+我已经发布的信息：<p />
+{% for room in room_pubs %}
+<a href="/room/detail/?room_id={{room.id}}">{{room.room_topic}}</a> {{ room.pub_date }}  <a href="/room/room_del/?room_id={{room.id}}">删除本条信息</a><p />
+{% endfor %}<p />
+*********************************************************************************************************************************************<p />
+发布的全部信息：<p />
+{% for room in all_room_pubs %}
+<a href="/room/detail/?room_id={{room.id}}">{{room.room_topic}}</a>  &nbsp&nbsp&nbsp&nbsp {{ room.pub_date }}<p />
+{% endfor %}
+{% endblock %}

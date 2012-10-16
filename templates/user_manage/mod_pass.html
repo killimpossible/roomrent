@@ -1,0 +1,10 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<form action="/user/mod_pass/" method="post">
+原始密码：<input type="password" name="old_password" id="old_password"><p />
+
+新的密码：<input type="password" name="new_password" id="new_password"><p />
+确认一下：<input type="password" name="re_new_password" id="re_new_password"><p />
+<input type="submit" value="确定">
+</form>
+{% endblock %}

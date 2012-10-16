@@ -1,0 +1,14 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<form action="/user/reg/" method="post">
+用    户：<input type="text" name="user_name" id="user_name" /><p />
+姓    氏：<input type="text" name="first_name" id="first_name" /><p />
+名    字：<input type="text" name="last_name" id="last_name" /><p />
+电    邮：<input type="text" name="email" id="email" /><p />
+密    码：<input type="password" name="password" id="password" /><p />
+确    认：<input type="password" name="re_password" id="re_password" /><p />
+手    机：<input type="text" name="phone" id="phone" /><p />
+联    系：<input type="text" name="contact" id="contact" /><p />
+<input type="submit" name="reg" id="reg" value="注册"><a href="/">返回</a>
+</form>
+{% endblock %}
